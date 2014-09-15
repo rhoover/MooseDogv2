@@ -1,0 +1,30 @@
+.body {
+    @include container;
+    margin: 0;
+    height: 100%;
+    font-family: $Merriweather, sans-serif;
+    color: $black-text;
+    @extend %cross-hatch;
+    &:after {
+        content: "phone";
+        //this should be display:none, but the position:absolute hack must remain until Chrome fixes its bug with getComputedStyle
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -1000px;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            content: "tablet";
+        }
+        // @include at-breakpoint($break-to-medium-large) {
+        //     content: "small-desktop"
+        // }
+        @include susy-breakpoint($bp-large, $columns-large) {
+            content: "desktop"
+        }
+    }
+}
+
+.bg-desktop {
+    background: url('/images/desktop-bg.jpg') no-repeat fixed left top;
+    background-size: cover;
+}

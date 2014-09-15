@@ -1,0 +1,7 @@
+.container-large {
+    @include susy-breakpoint($bp-large, $columns-large) {
+        @include span(24 of 24);
+        margin-top: rhythm(7, 16px);
+        background-color: rgba($white, .94);
+    }
+}

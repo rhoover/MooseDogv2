@@ -1,0 +1,53 @@
+.tools {
+    @include span(12 of 12);
+    padding: 0 span(1 of 12);
+    &-header {
+        @extend %section-header;
+        @include bleed-x(1em);
+    }
+
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include span(18 of 18);
+        padding: rhythm(1, 16px) span(3 of 18) 0;
+        &-header {
+            @include bleed-x(6.55em);
+        }
+    }
+
+    @include susy-breakpoint($bp-large, $columns-large) {
+        @include span(24 of 24);
+        padding: rhythm(1, 16px) span(4 of 24) 0 span(4 of 24);
+    }
+}
+
+.tool {
+    @include break;
+    &-image {
+        @include span(4 of 12);
+        height: rhythm(4.15, 16px);
+    }
+    &-describe {
+        @include span(7 of 12);
+        margin-top: rhythm(.25, 16px);
+    }
+
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        &-image {
+            @include span(6 of 18);
+        }
+        &-describe {
+            @include span(12 of 18);
+        }
+    }
+
+    @include susy-breakpoint($bp-large, $columns-large) {
+        &-image {
+            @include span(7 of 24);
+            margin-left: span(2 of 24);
+        }
+        &-describe {
+            @include span(15 of 24);
+            // color: $black-text;
+        }
+    }
+}

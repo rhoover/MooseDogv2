@@ -1,0 +1,7 @@
+$tools-layout: smart;
+@import "tools/*.png";
+@include all-tools-sprites;
+
+$sites-layout: smart;
+@import "sites/*.png";
+@include all-sites-sprites;
