@@ -34,6 +34,7 @@
 %section-header {
     margin-top: 0;
     padding: rhythm(.5, 16px) 0;
+    @include bleed-x(.85em);
     text-align: center;
     font-weight: normal;
     border-top: .07em solid $green;

@@ -3,7 +3,6 @@
     padding: 0 span(1 of 12);
     &-header {
         @extend %section-header;
-        @include bleed-x(1em);
     }
 
     @include susy-breakpoint($bp-medium, $columns-medium) {

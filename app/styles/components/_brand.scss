@@ -1,7 +1,9 @@
 .brand {
     @include span(12 of 12);
     padding: rhythm(3, 16px) span(1 of 12) 0;
-    text-align: center;
+    & p {
+        text-align: center;
+    }
     &-logo {
         height: rhythm(6.5, 16px);
         margin: rhythm(1, 16px) span(3 of 12);

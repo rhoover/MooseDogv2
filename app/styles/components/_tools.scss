@@ -3,7 +3,6 @@
     padding: 0 span(1 of 12);
     &-header {
         @extend %section-header;
-        @include bleed-x(1em);
     }
 
     @include susy-breakpoint($bp-medium, $columns-medium) {
@@ -23,11 +22,12 @@
 .tool {
     @include break;
     &-image {
-        @include span(4 of 12);
+        @include span(5 of 12);
+        margin-right: 0;
         height: rhythm(4.15, 16px);
     }
     &-describe {
-        @include span(7 of 12);
+        @include span(last 7 of 12);
         margin-top: rhythm(.25, 16px);
     }
 
