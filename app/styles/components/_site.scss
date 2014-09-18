@@ -33,6 +33,12 @@
         @include span(18 of 18);
         &-image {
             margin: rhythm(1, 16px) span(6 of 18) rhythm(1, 16px) span(5.5 of 18);
+            &-webapp {
+                margin: rhythm(1, 16px) span(8 of 18) rhythm(1, 16px) span(7.5 of 18);
+            }
+            &-simple {
+                margin: rhythm(1, 16px) span(6.25 of 18) rhythm(1, 16px) span(6.25 of 18);
+            }
         }
     }
 

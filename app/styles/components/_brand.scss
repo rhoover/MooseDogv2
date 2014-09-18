@@ -14,10 +14,6 @@
             font-weight: 600;
         }
     }
-    &-button-contact {
-        @extend %buttons;
-        @extend %buttons-green;
-    }
 
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(18 of 18);
@@ -57,6 +53,7 @@
         height: 60px;
         margin: 0 gutters(12) rhythm(1, 16px);
         background-color: rgba($green, .1);
+
         @include susy-breakpoint($bp-large, $columns-large) {
             background-color: transparent;
         }
