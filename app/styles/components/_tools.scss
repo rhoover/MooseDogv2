@@ -37,6 +37,7 @@
         }
         &-describe {
             @include span(12 of 18);
+            margin-right: 0;
         }
     }
 

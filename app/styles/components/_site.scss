@@ -11,16 +11,16 @@
     }
     &-image {
         height: rhythm(6.5, 16px);
-        max-width: span(10.75 of 12);
+        max-width: 250px;
         margin: 0 auto;
         &-webapp {
             height: rhythm(6.5, 16px);
-            max-width: span(5 of 12);
+            max-width: 115px;
             margin: 0 auto;
         }
         &-simple {
             height: rhythm(6.5, 16px);
-            max-width: span(9.5 of 12);
+            max-width: 217px;
             margin: 0 auto;
         }
     }
@@ -48,15 +48,6 @@
         margin-left: 0;
         &-client {
             margin: 0 span(1 of 24);
-        }
-        &-image {
-            max-width: span(5.25 of 12);
-            &-webapp {
-                max-width: span(5 of 24);
-            }
-            &-simple {
-                max-width: span(5 of 12);
-            }
         }
         &-button {
             @include span(8 of 24);
