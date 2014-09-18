@@ -11,10 +11,7 @@
 angular
   .module('mdsv2App', [
     'ngAnimate',
-    'ngCookies',
-    'ngResource',
     'ngRoute',
-    'ngSanitize',
     'ngTouch'
   ])
   .config(function ($routeProvider) {

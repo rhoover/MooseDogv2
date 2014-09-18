@@ -27,10 +27,6 @@
     &-button {
         @extend %buttons;
         @extend %buttons-green;
-        &-github {
-            @extend %buttons;
-            @extend %buttons-grey;
-        }
     }
 
     @include susy-breakpoint($bp-medium, $columns-medium) {

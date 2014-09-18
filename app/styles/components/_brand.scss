@@ -18,10 +18,6 @@
         @extend %buttons;
         @extend %buttons-green;
     }
-    &-button-github {
-        @extend %buttons;
-        @extend %buttons-grey;
-    }
 
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(18 of 18);
@@ -48,6 +44,21 @@
         }
         & p {
             color: $white;
+        }
+    }
+}
+
+.contact {
+    text-align: center;
+    &-image {
+        cursor: pointer;
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        margin: 0 gutters(12) rhythm(1, 16px);
+        background-color: rgba($green, .1);
+        @include susy-breakpoint($bp-large, $columns-large) {
+            background-color: transparent;
         }
     }
 }

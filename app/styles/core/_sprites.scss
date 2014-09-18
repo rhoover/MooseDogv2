@@ -5,3 +5,7 @@ $tools-layout: smart;
 $sites-layout: smart;
 @import "sites/*.png";
 @include all-sites-sprites;
+
+$contact-layout: smart;
+@import "contact/*.png";
+@include all-contact-sprites;

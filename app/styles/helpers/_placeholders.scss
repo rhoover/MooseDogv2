@@ -14,13 +14,11 @@
 }
 
 %buttons-green {
-    @include background-image(linear-gradient(lighten($green, 13%), $green));
+    @include background-image(linear-gradient(rgba(lighten($green, 13%), .25), rgba($green, .5)));
     color: $black;
-}
-
-%buttons-grey {
-    @include background-image(linear-gradient(lighten($black, 30%), lighten($black, 10%)));
-    color: $white;
+    &:hover {
+        @include background-image(linear-gradient(lighten($green, 13%), $green));
+    }
 }
 
 %cross-hatch {
