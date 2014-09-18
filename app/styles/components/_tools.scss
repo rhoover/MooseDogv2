@@ -29,6 +29,9 @@
     &-describe {
         @include span(last 7 of 12);
         margin-top: rhythm(.25, 16px);
+        &-bold {
+            font-weight: 600;
+        }
     }
 
     @include susy-breakpoint($bp-medium, $columns-medium) {
