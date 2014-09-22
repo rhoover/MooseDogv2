@@ -28,7 +28,6 @@
         @include gutters(4em inside);
         padding: rhythm(1, 16px) 0 0;
         &-logo {
-            // max-width: span(2.65 of 24);
             width: 155px;
             margin: 0 auto;
         }
@@ -52,10 +51,20 @@
         width: 60px;
         height: 60px;
         margin: 0 gutters(12) rhythm(1, 16px);
-        background-color: rgba($green, .1);
-
+        opacity: .5;
+    }
+    &:after {
+        content: "phone";
+        //this used to be display:none, but the position:absolute must remain Chrome respects the specification
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -1000px;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            content: "tablet";
+        }
         @include susy-breakpoint($bp-large, $columns-large) {
-            background-color: transparent;
+            content: "desktop"
         }
     }
 }

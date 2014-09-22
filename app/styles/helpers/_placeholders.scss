@@ -5,7 +5,7 @@
     text-decoration: none;
     text-align: center;
     // border: .3em solid rgba($black, .5);
-    border: .2em solid rgba(darken($green, 15%), .5);
+    border: .13em solid $green;
     border-radius: .25em;
     // @include box-shadow(.06em .1em  0 0 rgba($white, .1) inset);
     @include susy-breakpoint($bp-medium, $columns-medium) {

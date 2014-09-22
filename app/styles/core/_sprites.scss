@@ -9,3 +9,7 @@ $sites-layout: smart;
 $contact-layout: smart;
 @import "contact/*.png";
 @include all-contact-sprites;
+
+$contactdark-layout: smart;
+@import "contactdark/*.png";
+@include all-contactdark-sprites;
