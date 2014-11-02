@@ -1,6 +1,5 @@
 .story {
-    @include span(12 of 12);
-    padding: 0 span(1 of 12);
+    @include lob-owl();
     & p {
         text-align: center;
     }
@@ -15,16 +14,13 @@
     }
 
     @include susy-breakpoint($bp-medium, $columns-medium) {
-        @include span(18 of 18);
-        padding: rhythm(1, 16px) span(3 of 18) 0;
         &-header {
             @include bleed-x(6.55em);
         }
     }
 
     @include susy-breakpoint($bp-large, $columns-large) {
-        @include span(24 of 24);
-        padding: rhythm(1, 16px) span(4 of 24) 0 span(4 of 24);
+        margin-top: rhythm(1, 16px);
         p {
             padding: 0 span(1 of 24);
             color: $black-text;

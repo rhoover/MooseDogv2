@@ -24,12 +24,16 @@ angular
                         element.children()[1].classList.add('contactdark-github');
                         element.children()[2].classList.add('contactdark-twitter');
                     break;
-                    // case 'tablet' :
-                    //     element.addClass('bg-tablet');
-                    // break;
-                    // case 'small-desktop' :
-                    //     element.addClass("bg-small-desktop");
-                    // break;
+                    case 'tablet' :
+                        element.children()[0].classList.add('contactdark-mail');
+                        element.children()[1].classList.add('contactdark-github');
+                        element.children()[2].classList.add('contactdark-twitter');
+                    break;
+                    case 'small-desktop' :
+                        element.children()[0].classList.add('contact-mail');
+                        element.children()[1].classList.add('contact-github');
+                        element.children()[2].classList.add('contact-twitter');
+                    break;
                     case 'desktop' :
                         element.children()[0].classList.add('contact-mail');
                         element.children()[1].classList.add('contact-github');

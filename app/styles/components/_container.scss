@@ -1,18 +1,15 @@
-.work {
+.container {
+    background-color: transparent;
     @include span(12 of 12);
     @include lob-owl();
-    &-header {
-        @extend %section-header;
-    }
-
+    padding: 0 span(1 of 12);
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(18 of 18);
-        &-header {
-            @include bleed-x(6.55em);
-        }
+        padding: 0 span(3 of 18);
     }
-
     @include susy-breakpoint($bp-large, $columns-large) {
         @include span(24 of 24);
+        padding: 0 span(4 of 24);
+        background-color: rgba($white, .94);
     }
 }

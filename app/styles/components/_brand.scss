@@ -1,6 +1,7 @@
 .brand {
     @include span(12 of 12);
-    padding: rhythm(3, 16px) span(1 of 12) 0;
+    padding: rhythm(3.25, 16px) span(1 of 12) 0;
+    @include lob-owl();
     & p {
         text-align: center;
     }
@@ -17,15 +18,13 @@
 
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(18 of 18);
-        padding: rhythm(3, 16px) span(3 of 18) 0;
         &-logo {
             margin: rhythm(1, 16px) span(6 of 18) rhythm(1, 16px) span(7 of 18);
         }
     }
 
     @include susy-breakpoint($bp-large, $columns-large) {
-        @include span(24 of 24);
-        @include gutters(4em inside);
+        @include span(24 of 24 no-gutters);
         padding: rhythm(1, 16px) 0 0;
         &-logo {
             width: 155px;
@@ -53,7 +52,7 @@
         margin: 0 gutters(12) rhythm(1, 16px);
         opacity: .5;
         &:hover {
-            opacity: 1;
+            opacity: .75;
         }
     }
     &:after {

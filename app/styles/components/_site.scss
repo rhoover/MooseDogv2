@@ -1,7 +1,8 @@
 .hero-site {
-    @include span(12 of 12);
+    @include lob-owl();
     text-align: center;
     &-client {
+        margin: 0;
         padding: rhythm(.25, 16px) 0;
         border-top: .1em solid $green;
         border-bottom: .1em solid $green;
@@ -12,7 +13,7 @@
     &-image {
         height: rhythm(6.5, 16px);
         max-width: 250px;
-        margin: 0 auto;
+        margin: rhythm(1, 16px) auto 0;
         &-webapp {
             height: rhythm(6.5, 16px);
             max-width: 115px;
@@ -26,18 +27,21 @@
     }
     &-button {
         @extend %buttons;
-        @extend %buttons-green;
+        &-link {
+            text-decoration: none;
+            color: $black;
+        }
     }
 
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(18 of 18);
         &-image {
-            margin: rhythm(1, 16px) span(6 of 18) rhythm(1, 16px) span(5.5 of 18);
+            margin: rhythm(1, 16px) auto 0;
             &-webapp {
-                margin: rhythm(1, 16px) span(8 of 18) rhythm(1, 16px) span(7.5 of 18);
+                margin: rhythm(1, 16px) auto 0;
             }
             &-simple {
-                margin: rhythm(1, 16px) span(6.25 of 18) rhythm(1, 16px) span(6.25 of 18);
+                margin: rhythm(1, 16px) auto 0;
             }
         }
     }

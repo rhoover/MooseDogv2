@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html>
   <head>
     <meta charset="utf-8">
     <title>MooseDog Studios</title>
@@ -45,7 +45,23 @@
     <![endif]-->
 
     <h1 class="header">MooseDog Studios</h1>
-    <main ng-view class="container-all"></main>
+
+        <section class="brand">
+            <div class="tools-moosedog brand-logo"></div>
+            <p>In some parts of Vermont,  I'm referred to as</p>
+            <p class="brand-strong-name">MooseDog Studios,</p>
+            <p>in other parts as</p>
+            <p class="brand-strong">Robin Hoover</p>
+            <p>It really doesn't matter to me, for you see, up here...</p>
+            <p class="brand-strong">convention always takes a back seat to quality.</p>
+            <div rh-contact class= contact>
+                <a href= "mailto:robin.hoover@gmail.com?subject=Initial%20Contact" class=" contact-image"></a>
+                <a href ="https://github.com/rhoover?tab=repositories" class=" contact-image" target="_blank"></a>
+                <a href="https://twitter.com/robinhoover" class="contact-image" target="_blank"></a>
+            </div>
+        </section>
+
+    <main ng-view class="container"></main>
 
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>

@@ -1,13 +1,12 @@
 .tools {
     @include span(12 of 12);
-    padding: 0 span(1 of 12);
+    @include lob-owl();
     &-header {
         @extend %section-header;
     }
 
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(18 of 18);
-        padding: rhythm(1, 16px) span(3 of 18) 0;
         &-header {
             @include bleed-x(6.55em);
         }
@@ -15,7 +14,6 @@
 
     @include susy-breakpoint($bp-large, $columns-large) {
         @include span(24 of 24);
-        padding: rhythm(1, 16px) span(4 of 24) 0 span(4 of 24);
     }
 }
 
@@ -28,7 +26,8 @@
     }
     &-describe {
         @include span(last 7 of 12);
-        margin-top: rhythm(.25, 16px);
+        margin: 0;
+        padding: rhythm(.5, 16px) 0;
         &-bold {
             font-weight: 600;
         }
@@ -47,11 +46,9 @@
     @include susy-breakpoint($bp-large, $columns-large) {
         &-image {
             @include span(7 of 24);
-            margin-left: span(2 of 24);
         }
         &-describe {
             @include span(15 of 24);
-            // color: $black-text;
         }
     }
 }
