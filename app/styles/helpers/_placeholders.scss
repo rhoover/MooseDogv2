@@ -4,10 +4,9 @@
     margin-bottom: rhythm(1, 16px);
     text-decoration: none;
     text-align: center;
-    // border: .3em solid rgba($black, .5);
-    border: .13em solid $green;
-    border-radius: .25em;
-    // @include box-shadow(.06em .1em  0 0 rgba($white, .1) inset);
+    border: .12em solid $green;
+    border-radius: .15em;
+    @include box-shadow(0 0 3px 1px rgba($black, .2));
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(6 of 18);
         margin: 0 span(6 of 18) rhythm(1, 16px);
