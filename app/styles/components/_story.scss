@@ -1,5 +1,5 @@
 .story {
-    @include lob-owl();
+    @extend %lobotomize;
     & p {
         text-align: center;
     }
