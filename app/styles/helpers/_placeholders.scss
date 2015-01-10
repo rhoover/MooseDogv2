@@ -1,19 +1,41 @@
 %buttons {
+    position: relative;
     padding: rhythm(.5, 16px) 0;
     margin-bottom: rhythm(1, 16px);
     margin-left: span(2 of 12);
     margin-right: span(2 of 12);
-    border: .12em solid $green;
-    border-radius: .15em;
-    @include box-shadow(0 0 3px 1px rgba($black, .2));
+    border: .15em solid $green;
+    border-radius: .25em;
     text-align: center;
-    &:hover {
-        @include background-image(linear-gradient(rgba(lighten($green, 13%), .25), rgba($green, .5)));
-    }
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(10 of 18);
         margin-left: span(4 of 18);
         margin-right: span(4 of 18);
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        //expando-hover, courtesy: http://tobiasahlin.com/blog/css-trick-animating-link-underlines/
+        cursor: pointer;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            bottom: 0px;
+            left: 0px;
+            background-color: rgba($green, .04);
+            visibility: hidden;
+            @include scaleX(0);
+            @include transition-property(all);
+            @include transition-duration(0.3s);
+            @include transition-timing-function(cubic-bezier(0.250, 0.460, 0.450, 0.940));
+        }
+        &:hover {
+            // @include type-weight(bold);
+            &:after {
+                visibility: visible;
+                @include scaleX(1);
+            }
+        }
     }
 }
 

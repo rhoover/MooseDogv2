@@ -5,3 +5,12 @@
     'merriweathersans-light.eot');
 
     $Merriweather: 'MerriweatherSans', arial, sans-serif;
+
+@include font-face('PlayFairDisplay', font-files(
+    'playfairdisplay-black-webfont.woff',woff,
+    // 'playfairdisplay-black-webfont.woff2',woff2, Compass freaks out over woff2 :(.
+    'playfairdisplay-black-webfont.ttf', ttf,
+    'playfairdisplay-black-webfont.svg', svg),
+    'playfairdisplay-black-webfont.eot');
+
+    $PlayFair: 'PlayFairDisplay', georgia, serif;
