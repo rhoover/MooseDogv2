@@ -8,7 +8,7 @@
         @include span(18 of 18);
         padding: 0 span(3 of 18);
     }
-    @include susy-breakpoint($bp-large, $columns-large) {
+    @include susy-breakpoint($bp-largish, $columns-largish) {
         @include span(24 of 24);
         margin-top: 0px;
         padding: rhythm(8, 16px) span(4 of 24);

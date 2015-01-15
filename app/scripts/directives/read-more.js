@@ -12,9 +12,19 @@ angular.module('mdsv2App')
     return {
       restrict: 'A',
       link: function (scope, element) {
+
         element.on('click', function () {
-            element.addClass('read-clicked');
-            scope.$emit('message', 'clicked');
+
+              if (element.hasClass('read-clicked') == false ){
+                  element.addClass('read-clicked');
+                  scope.$emit('add', 'clicked');
+                  element.children()[0].innerHTML = 'Read Less';
+              } else {
+                element.removeClass('read-clicked');
+                scope.$emit('remove', 'clicked');
+                element.children()[0].innerHTML = 'Read More';
+              }
+
         });
       }
     };

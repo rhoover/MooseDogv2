@@ -29,7 +29,7 @@ angular
                         element.children()[1].classList.add('contactdark-github');
                         element.children()[2].classList.add('contactdark-twitter');
                     break;
-                    case 'small-desktop' :
+                    case 'laptop' :
                         element.children()[0].classList.add('contact-mail');
                         element.children()[1].classList.add('contact-github');
                         element.children()[2].classList.add('contact-twitter');

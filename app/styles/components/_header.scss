@@ -11,7 +11,7 @@
     @include background-image(linear-gradient(rgba($black, .85), rgba($black, 1)));
     @include box-shadow(rgba($black, .15) 0 .2em .5em);
     border-bottom: .06em solid $black;
-    @include susy-breakpoint($bp-large, $columns-large) {
+    @include susy-breakpoint($bp-largish, $columns-largish) {
         display: none;
     }
 }

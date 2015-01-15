@@ -6,20 +6,13 @@
     &-logo {
         height: rhythm(6.5, 16px);
         margin: rhythm(1, 16px) span(3 of 12);
-        // @include translate3d(0, 0, 0);
     }
     &-strong {
         font-weight: 600;
-        // @include translate3d(0, 0, 0);
         &-name {
-            font-family: $PlayFair, georgia, serif;
             @include adjust-font-size-to(32px);
             margin-top: rhythm(.5, 16px);
-            // @include translate3d(0, 0, 0);
         }
-    }
-    &-content {
-        // @include translate3d(0, 0, 0);
     }
 
     @include susy-breakpoint($bp-medium, $columns-medium) {
@@ -29,7 +22,7 @@
         }
     }
 
-    @include susy-breakpoint($bp-large, $columns-large) {
+    @include susy-breakpoint($bp-largish, $columns-largish) {
         position: fixed;
         @include span(24 of 24 no-gutters);
         height: 100%;
@@ -40,7 +33,7 @@
         color: $white-text;
         @include transition(all 1.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.25s);
         &-clicked {
-            height: 20%;
+            height: 25%;
             background-size: 100% 0.5%;
             background-color: lighten($black, 15%);
             border-bottom: .1em solid $black;
@@ -63,7 +56,7 @@
                 @include translate3d(0, 0, 0);
                 @include transition(all 1.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.25s);
                 &-clicked {
-                    @include translate3d(-20%, -40%, 0);
+                    @include translate3d(-10%, -50%, 0);
                 }
                 &:before {
                     content: "";
@@ -76,6 +69,9 @@
             }
         }
         &-content {
+            &:first-of-type {
+                margin-top: rhythm(1, 16px);
+            }
             @include translate3d(0, 0, 0);
             @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s);
             &-clicked {
@@ -103,6 +99,24 @@
             width: 100%;
             top: 0;
             left: 0;
+        }
+    }
+
+    @include susy-breakpoint($bp-large, $columns-large) {
+        &-clicked {
+            height: 20%;
+        }
+        &-content {
+            &:first-of-type {
+                margin-top: rhythm(3, 16px);
+            }
+        }
+        &-strong {
+            &-name {
+                &-clicked {
+                    @include translate3d(-20%, -70%, 0);
+                }
+            }
         }
     }
 }
@@ -135,6 +149,9 @@
         @include susy-breakpoint($bp-medium, $columns-medium) {
             content: "tablet";
         }
+        @include susy-breakpoint($bp-largish, $columns-largish) {
+            content: "laptop";
+        }
         @include susy-breakpoint($bp-large, $columns-large) {
             content: "desktop";
         }
@@ -143,7 +160,7 @@
 
 .read {
     display: none;
-    @include susy-breakpoint($bp-large, $columns-large) {
+    @include susy-breakpoint($bp-largish, $columns-largish) {
         display: block;
         position: absolute;
         top: 0;
@@ -157,13 +174,14 @@
         @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
         &:hover {
             border: .15em solid rgba($white-text, .95);
+            @include box-shadow(0px 0px 7px 3px rgba($white-text, .3));
         }
         &-text {
             @include adjust-font-size-to(10px);
             margin: 0;
         }
-        &-clicked {
-            @include translate3d(300%, 0, 0);
-        }
+        // &-clicked {
+        //     @include translate3d(300%, 0, 0);
+        // }
     }
 }
