@@ -10,7 +10,8 @@
     }
     @include susy-breakpoint($bp-large, $columns-large) {
         @include span(24 of 24);
-        padding: 0 span(4 of 24);
+        margin-top: 0px;
+        padding: rhythm(8, 16px) span(4 of 24);
         background-color: rgba($white, .94);
     }
 }

@@ -34,37 +34,59 @@
         @include span(24 of 24 no-gutters);
         height: 100%;
         padding: 0;
+        background-size: 100% 120%;
         overflow: hidden;
         z-index: 10;
         color: $white-text;
+        @include transition(all 1.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.25s);
+        &-clicked {
+            height: 20%;
+            background-size: 100% 0.5%;
+            background-color: lighten($black, 15%);
+            border-bottom: .1em solid $black;
+        }
         &-logo {
             display: none;
         }
         &-strong {
             @include adjust-font-size-to(21px);
+            @include translate3d(0, 0, 0);
+            @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.75s);
+            &-clicked {
+                @include translate3d(100%, 0, 0);
+            }
             &-name {
                 @include adjust-font-size-to(64px);
                 margin-top: 0;
                 margin-left: -2em;
                 padding-bottom: rhythm(.25, 16px);
+                @include translate3d(0, 0, 0);
+                @include transition(all 1.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.25s);
+                &-clicked {
+                    @include translate3d(-20%, -40%, 0);
+                }
                 &:before {
                     content: "";
                     display: inline-block;
                     background: url("/images/apple-touch-icon-114x114.png");
                     height: 114px;
                     width: 114px;
-                    // margin-right: gutters(18);
                     @include translate(-10%, 35%);
                 }
             }
         }
         &-content {
+            @include translate3d(0, 0, 0);
+            @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s);
+            &-clicked {
+                @include translate3d(100%, 0, 0);
+            }
         }
         &:before {
             content: " ";
             background: url("/images/desktop.jpg");
-            background-size: cover;
-            background-color: $black-text;
+            background-size: inherit;
+            background-repeat: no-repeat;
             position: absolute;
             z-index: -3;
             height: 100%;
@@ -87,6 +109,11 @@
 
 .contact {
     text-align: center;
+    @include translate3d(0, 0, 0);
+    @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.0s);
+    &-clicked {
+        @include translate3d(100%, 0, 0);
+    }
     &-image {
         cursor: pointer;
         display: inline-block;
@@ -104,12 +131,12 @@
         display: block;
         position: absolute;
         top: 0;
-        left: -1000px;
+        left: -10000px;
         @include susy-breakpoint($bp-medium, $columns-medium) {
             content: "tablet";
         }
         @include susy-breakpoint($bp-large, $columns-large) {
-            content: "desktop"
+            content: "desktop";
         }
     }
 }
