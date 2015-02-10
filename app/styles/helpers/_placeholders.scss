@@ -1,9 +1,11 @@
 %buttons {
     position: relative;
+    @include span(12 of 12);
+    // width: 100%;
     padding: rhythm(.5, 16px) 0;
     margin-bottom: rhythm(1, 16px);
-    margin-left: span(2 of 12);
-    margin-right: span(2 of 12);
+    // margin-left: span(2 of 12);
+    // margin-right: span(2 of 12);
     border: .15em solid $green;
     border-radius: .25em;
     text-align: center;
